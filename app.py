@@ -63,7 +63,7 @@ def main():
         placeholder="Example：\nNew York City|USA\nNew York\nCiudad de México|MEX"
     )
 
-    if st.button("开始匹配"):
+    if st.button("Start Matching"):
         if not raw_input.strip():
             st.warning("Please enter at least one city name.")
             return
