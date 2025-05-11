@@ -12,7 +12,7 @@ def load_all_data():
         for level in range(6):
             filepath = f"gad{version}_level{level}.csv"
             try:
-                df = pd.read_csv(filepath)
+                df = pd.read_csv(filepath, low_memory=False)
             except Exception as e:
                 # If a file is missing or corrupt, store empty DataFrame
                 st.error(f"Loading failed: {filepath}\n{e}")
